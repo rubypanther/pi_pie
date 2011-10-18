@@ -1,0 +1,6 @@
+A million or so digits of π as a BigDecimal, along with one up to the Feynman Point.
+
+Usage:
+  require 'pi_pie'
+  puts "The area of a circle with a 1cm radius: %fcm2" % [PiPie::Feynman]
+  
