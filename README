@@ -2,5 +2,12 @@ A million or so digits of π as a BigDecimal, along with one up to the Feynman P
 
 Usage:
   require 'pi_pie'
-  puts "The area of a circle with a 1cm radius: %scm2" % [PiPie::Feynman.to_s('F')]
 
+  r = BigDecimal.new("1.0")
+  puts "The area of a circle with a %.01fcm radius: %scm2" % [r,(PiPie.Feynman*(r**2)).to_s("F")]
+
+  # warning: this might be too much for your terminal
+  puts PiPie.π.to_s("F")
+
+  # or if you just need 10_000 digits:
+  puts PiPie.π.round(10_000).to_s("F")
